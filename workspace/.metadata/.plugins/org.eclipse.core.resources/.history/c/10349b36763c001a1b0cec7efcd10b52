@@ -1,0 +1,26 @@
+package br.com.teste.teste.controller;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import br.com.teste.teste.model.Usuario;
+
+@RestController 
+public class UsuarioController {
+
+	@PostMapping("/login")
+	public ResponseEntity<Token> autentica(@RequestBody Usuario usuario){
+		if(usuario.getEmail().equals("joao@gmail.com") && usuario.getSenha().equals("123456")) {
+			usuario.setId(1);
+			usuario.setNome("Joao Vitor");
+		
+			//contruindo o token de segurança
+			String tk = 
+		}else {
+		
+		}
+	}
+	
+}
